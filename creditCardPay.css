@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgb(75, 80, 83) url("img/pexels-philippe-donn-1114690.jpg") center/cover;
+	height: 100%;
+}
+
+.card {
+	background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
+	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5), -1px -1px 2px #aaa, 1px 1px 2px #555;
+	backdrop-filter: blur(0.8rem);
+	background: rgb(75, 80, 83) url("img/pexels-frank-cone-2258536.jpg") center/cover;
+	border: 3px solid white;
+	padding: 1rem;
+	border-radius: 1rem;
+	transition: 2s cardEnter;
+	display: flex;
+
+	max-width: 100%;
+	opacity: 1;
+}
+.card1 {
+	background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
+	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5), -1px -1px 2px #aaa, 1px 1px 2px #555;
+	backdrop-filter: blur(0.8rem);
+	background: rgb(75, 80, 83) url("img/pexels-frank-cone-2258536.jpg") center/cover;
+	border: 3px solid white;
+	padding: 1rem;
+	border-radius: 1rem;
+	transition: 2s cardEnter;
+	display: flex;
+	justify-content: center;
+	max-width: 100%;
+	opacity: 1;
+	margin-bottom: 20px;
+}
+.summary {
+	color: white;
+}
+.card__row {
+	display: flex;
+	max-width: 100%;
+	padding-bottom: 0.5rem;
+	gap: 10px;
+}
+.summary > p {
+	font-size: 20px;
+	text-align: center;
+}
+.summary > h2 {
+	font-size: 25px;
+	text-align: center;
+}
+li {
+	font-size: 13px;
+	text-align: center;
+
+	margin-bottom: 2px;
+	background: none;
+	border: double 3px rgb(70, 70, 70);
+	width: 50vw;
+	color: #fff;
+	text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.card__title {
+	font-weight: 600;
+	font-size: 1.8rem;
+	color: #ffffff;
+	margin: 0.5rem 0.8rem;
+	text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+.numberRowWrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.expireRowWrapper {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	gap: 10px;
+}
+.numberWrapper {
+	display: flex;
+	flex-direction: column;
+}
+.payBtnWrapper {
+	display: flex;
+	justify-content: center;
+}
+.card__col {
+	max-width: 25%;
+	padding-right: 1rem;
+}
+.circle {
+	color: white;
+}
+#formWrapper {
+	max-width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+.Expire {
+	width: 100%;
+}
+.card__input {
+	background: none;
+	border-style: dotted 6px white;
+	font-size: 1.2rem;
+	padding-left: 5px;
+	width: 300px;
+	margin-left: 10px;
+	color: #fff;
+	text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+.card__input--large {
+	font-size: 1.7rem;
+}
+
+.card__input::placeholder {
+	color: rgba(255, 255, 255, 0.799);
+	text-shadow: none;
+	font-size: 18px;
+}
+
+.card__input:focus {
+	outline: none;
+	scale: 1.1;
+	border-color: unset;
+}
+
+.card__label {
+	display: block;
+	color: #fff;
+	width: 100px;
+	margin-bottom: 5px;
+	margin-left: 10px;
+	text-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+	font-weight: 400;
+}
+
+.card__chip {
+	align-self: flex-end;
+}
+#expireWrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+.card__chip img {
+	width: 60px;
+}
+
+.card__brand {
+	font-size: 3rem;
+	color: #fff;
+	min-width: 100px;
+	min-height: 75px;
+	text-align: right;
+	text-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+card:hover::before {
+	transform-origin: 0% 50%;
+	transform: scaleX(1);
+}
+a:hover::after {
+	transform: translate3d(0, 0, 0);
+}
+
+.success {
+	border: solid 5px green;
+}
+.warning {
+	border: solid 5px red;
+}
+#ExpiryDate {
+	max-width: 150px;
+}
+#cardCvv {
+	max-width: 150px;
+}
+
+#wrapper {
+	margin-top: 15px;
+	display: flex;
+	flex-direction: column;
+	height: max-content;
+}
+#submitBtn {
+	width: 90px;
+	font-size: 20px;
+	background-color: unset;
+	border: 5px solid white;
+	color: white;
+	border-radius: 8px;
+	padding: 10px;
+	margin-left: auto;
+}
+#submitBtn:hover {
+	cursor: pointer;
+	scale: 1.1;
+	padding: 10px 15px;
+	border-color: green;
+}
+
+@media screen and (max-width: 600px) {
+	#formwrapper {
+		gap: 2px;
+	}
+	.card {
+		border: 5px solid white;
+		max-width: 90%;
+		margin: auto;
+		margin-top: 10px;
+	}
+	.card1 {
+		border: 5px solid white;
+		max-width: 90%;
+		margin: auto;
+	}
+
+	.card__col {
+		max-width: 80%;
+	}
+	.card__title {
+		font-size: 15px;
+		margin: 5px;
+	}
+	.numberRowWrapper {
+		padding-bottom: 0px !important;
+	}
+	.card__input {
+		width: 190px;
+		border: 3px solid;
+		margin-right: 5px;
+		font-size: 15px;
+		margin-bottom: 5px;
+	}
+	.card__input:focus {
+		border: 3px solid;
+	}
+	#expireWrapper {
+		height: 20vh;
+	}
+	#submitBtn {
+		height: 40px;
+		margin-bottom: 0px !important;
+		font-size: 15px !important;
+		padding: 2px;
+	}
+	#submitBtn:hover {
+		cursor: pointer;
+		scale: 1.05;
+		border-color: green;
+		border: 2px solid white;
+	}
+
+	#typeimg {
+		width: 50px;
+		padding-bottom: 5px;
+		margin-left: auto;
+	}
+	.card__chip {
+		display: flex;
+		justify-content: center;
+	}
+
+	.card__label {
+		margin-bottom: 3px;
+		font-size: 15px;
+		width: 100%;
+	}
+	#cardExpiry {
+		width: 70px;
+	}
+	#cardCvv {
+		width: 70px;
+	}
+	.card__row {
+		display: inline-block;
+		padding-bottom: 10px;
+	}
+	.card__brand {
+		height: 10px;
+	}
+	.success {
+		border: solid 5px green;
+		border-style: dashed;
+	}
+	.warning {
+		border: solid 5px red;
+		border-style: dashed;
+	}
+	#submitBtn {
+		margin-left: 5px;
+		margin-bottom: 10px;
+	}
+}

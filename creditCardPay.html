@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="creditCardPay.css" />
+		<title>Credit Card Form</title>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div>
+				<div class="card1">
+					<div class="summary">
+						<p>You're paying,</p>
+						<h2 id="priceTotal">
+							<div class="circle"></div>
+							$450.00
+						</h2>
+
+						<ul id="itemsList">
+							<li>
+								<div class="description">
+									Custom Gucci Shoes
+									<span>Size: m Color: Red</span>
+								</div>
+								<div class="price">400.00</div>
+							</li>
+							<li>
+								<div class="description">
+									Nivea Cream 400ml
+									<span>Size: m Color: Blue</span>
+								</div>
+								<div class="price">400.00</div>
+							</li>
+							<li>
+								<div class="description">Dicounts & Offers</div>
+								<div class="price">0.00</div>
+							</li>
+							<hr />
+							<li>
+								<div class="description">Tax</div>
+								<div class="price">0.00</div>
+							</li>
+							<li>
+								<div class="description">Total</div>
+								<div id="Pricefinal" class="price">0.00</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="card">
+					<form id="formWrapper">
+						<h1 class="card__title">Enter Payment Information</h1>
+
+						<div class="card__row">
+							<div class="card__col">
+								<label for="cardHolder" class="card__label">Card Holder</label>
+								<input
+									type="text"
+									class="card__input card__input--large"
+									name="cardHolder"
+									maxlength="30"
+									required
+									id="cardHolder"
+									placeholder="John Doe"
+									onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || event.key == ' '"
+								/>
+							</div>
+						</div>
+						<div class="card__row numberRowWrapper">
+							<div class="card__col numberWrapper">
+								<label for="cardNumber" class="card__label">Card Number</label>
+								<input
+									type="text"
+									class="card__input card__input--large"
+									name="cardNumber"
+									maxlength="19"
+									required
+									id="cardNumber"
+									placeholder="xxxx-xxxx-xxxx-xxxx"
+									onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+								/>
+							</div>
+							<div class="card__col card__chip">
+								<img id="typeimg" src="img/chip.svg" alt="chip" />
+							</div>
+						</div>
+						<div id="expireWrapper" class="">
+							<div class="card__row expireRowWrapper">
+								<div class="card__col">
+									<label for="cardExpiry" class="card__label">Expiry Date</label>
+									<input
+										type="text"
+										name="cardExpiry"
+										maxlength="5"
+										required
+										onkeypress="return event.charCode >=48 && event.charCode <= 57"
+										class="card__input"
+										id="ExpiryDate"
+										placeholder="xx/xx"
+									/>
+								</div>
+								<div class="card__col">
+									<label for="cardCvv" class="card__label">CCV</label>
+									<input
+										type="text"
+										class="card__input Expire"
+										required
+										name="cardCvv"
+										maxlength="3"
+										id="cardCvv"
+										placeholder="xxx"
+										onkeyup=""
+										onkeypress="return event.charCode >=48 && event.charCode <= 57"
+									/>
+								</div>
+								<div class="card__col card__brand"><i id="cardBrand"></i></div>
+							</div>
+						</div>
+						<div class="card__row payBtnWrapper">
+							<div class="card__col payBtn">
+								<button type="submit" id="submitBtn">Pay</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script src="creditCardPay.js"></script>
+	</body>
+</html>
